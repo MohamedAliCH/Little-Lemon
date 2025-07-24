@@ -1,38 +1,186 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  margin: 5vw;
+  margin-top: 2vh;
+  background-color: #fffef9; 
+  color: #333;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo img {
+  max-width: 40%;
+  height: 10%;
+  margin: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #495e57; 
+  max-width: 70%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+nav li {
+  margin: 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #f4ce14; 
+}
+
+.deals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4ce14; 
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  background-color: #edefee; 
+  padding: 20px;
+  border-radius: 10px;
+}
+.content section {
+  flex: 1 1 300px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.content a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #495e57;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.content a:hover {
+  background-color: #ee9972; 
+}
+
+footer {
   text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: #333;
+  background-color: #edefee;
+  border-top: 1px solid #ccc;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+footer img {
+  max-width: 50px;
+  margin-bottom:5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.booking-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.booking-form label {
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.booking-form input[type="date"],
+.booking-form input[type="number"],
+.booking-form select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.booking-form input[type="date"]:focus,
+.booking-form input[type="number"]:focus,
+.booking-form select:focus {
+  outline: none;
+  border-color: #495e57;
+  box-shadow: 0 0 0 2px rgba(73, 94, 87, 0.2);
+}
+
+.booking-form span[role="alert"] {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: -0.5rem;
+}
+
+.booking-form input[type="submit"] {
+  width: fit-content;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #495e57;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.booking-form input[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.booking-form input[type="submit"]:not(:disabled):hover {
+  background-color: #3e4d47;
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .logo img {
+    max-width: 80%;
   }
 }
